@@ -1,275 +1,145 @@
-/* Estilos Globales */
 body {
-    font-family: 'Arial', sans-serif;
-    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
     background-color: #0e0e0e;
+    color: #ffffff;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
-/* Estilos de Navegación */
-nav {
+header {
+    background-color: #1e1e1e;
+    padding: 1rem 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #00ffae;
+}
+
+.nav-links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #151515;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
 }
 
-nav .logo {
-    font-size: 1.5rem;
-    color: #ffffff;
-}
-
-nav .nav-links {
-    display: flex;
-    list-style: none;
-}
-
-nav .nav-links li {
+.nav-links li {
     margin: 0 1rem;
 }
 
-nav .nav-links a {
-    color: #ffffff;
+.nav-links a {
     text-decoration: none;
+    color: #ffffff;
     transition: color 0.3s;
 }
 
-nav .nav-links a:hover {
+.nav-links a:hover {
     color: #00ffae;
 }
 
-/* Sección de Inicio */
-header {
-    height: 100vh;
-    background: url('background.jpg') no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-}
-
-header h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-header p {
+.menu-toggle {
+    display: none;
+    cursor: pointer;
     font-size: 1.5rem;
-    margin: 1rem 0;
+    color: #ffffff;
 }
 
-/* Sección Sobre Mí */
-#sobre-mi {
-    padding: 2rem;
+section {
+    padding: 2rem 0;
     background-color: #151515;
-}
-
-#sobre-mi h2 {
-    text-align: center;
     margin-bottom: 1rem;
 }
 
-.timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.timeline-item {
-    background-color: #212121;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-.timeline-item h3 {
-    margin: 0;
+h2 {
+    text-align: center;
     color: #00ffae;
+    margin-bottom: 1.5rem;
 }
 
-/* Sección Habilidades */
-#habilidades {
-    padding: 2rem;
-    background-color: #1e1e1e;
-}
-
-#habilidades h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.skills {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+p {
+    line-height: 1.6;
+    text-align: justify;
 }
 
 .skill-bar {
-    display: flex;
-    flex-direction: column;
-}
-
-.skill-bar span {
-    font-weight: bold;
+    margin: 1rem 0;
 }
 
 .progress-bar {
-    width: 100%;
-    height: 10px;
-    background-color: #333333;
+    background-color: #2e2e2e;
     border-radius: 5px;
     overflow: hidden;
+    height: 25px;
 }
 
 .progress {
     height: 100%;
-    transition: width 1s;
-}
-
-.progress.html {
-    width: 90%;
-    background-color: #ff6347;
-}
-
-.progress.css {
-    width: 80%;
-    background-color: #4682b4;
-}
-
-.progress.js {
-    width: 70%;
-    background-color: #f0db4f;
-}
-
-/* Sección Proyectos */
-#proyectos {
-    padding: 2rem;
-    background-color: #151515;
-}
-
-#proyectos h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.projects {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.project-item {
-    background-color: #212121;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-.project-item h3 {
-    margin: 0;
-    color: #00ffae;
-}
-
-/* Sección Blog Técnico */
-#blog {
-    padding: 2rem;
-    background-color: #1e1e1e;
-}
-
-#blog h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.blog-posts {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.post-item {
-    background-color: #212121;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-.post-item h3 {
-    margin: 0;
-    color: #00ffae;
-}
-
-/* Sección Juego */
-#juego {
-    padding: 2rem;
-    background-color: #151515;
-}
-
-#juego h2 {
-    text-align: center;
-    margin-bottom: 1rem;
+    background-color: #00ffae;
+    width: 0;
+    transition: width 1s ease-in-out;
 }
 
 #game-container {
     background-color: #212121;
-    padding: 1rem;
-    border-radius: 5px;
+    padding: 2rem;
+    border-radius: 10px;
     text-align: center;
 }
 
-/* Sección Noticias */
-#noticias {
+#gameCanvas {
+    background-color: #000;
+    width: 100%;
+    height: 400px;
+}
+
+#startGame {
+    background-color: #00ffae;
+    color: #0e0e0e;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#startGame:hover {
+    background-color: #00d994;
+}
+
+#news-container {
     padding: 2rem;
     background-color: #1e1e1e;
 }
 
-#noticias h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-#news-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
 .news-item {
-    background-color: #212121;
+    background-color: #2e2e2e;
     padding: 1rem;
     border-radius: 5px;
-}
-
-/* Sección Contacto */
-#contacto {
-    padding: 2rem;
-    background-color: #151515;
-}
-
-#contacto h2 {
-    text-align: center;
     margin-bottom: 1rem;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
 }
 
 form input,
 form textarea {
-    padding: 0.5rem;
-    border-radius: 5px;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
     border: none;
+    border-radius: 5px;
+    background-color: #2e2e2e;
+    color: #ffffff;
 }
 
 form button {
-    padding: 0.5rem;
     background-color: #00ffae;
-    color: #ffffff;
+    color: #0e0e0e;
+    padding: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -280,9 +150,19 @@ form button:hover {
     background-color: #00d994;
 }
 
-/* Footer */
 footer {
+    background-color: #1e1e1e;
     padding: 1rem;
     text-align: center;
-    background-color: #0e0e0e;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-toggle {
+        display: block;
+        text-align: center;
+    }
 }
