@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Cargar noticias desde una API
-    const apiKey = 'tu_api_key_aqui';
+    const apiKey = 'dd838d87ac09417cb0961b0192ab543c';
     const newsContainer = document.getElementById("news-container");
 
     async function loadNews() {
